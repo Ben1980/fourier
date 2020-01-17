@@ -1,5 +1,5 @@
 # fourier
-> Short blurb about what your product does.
+> Showcase implementation of the fast fourier algorithm as discused on [thoughts-on-cpp.com](https://thoughts-on-cpp.com/..)
 
 <!-- PROJECT SHIELDS -->
 <!--
@@ -10,9 +10,7 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
 [![<ORG_NAME>](https://circleci.com/gh/Ben1980/fourier.svg?style=svg)](https://circleci.com/gh/Ben1980/fourier)
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
+[![CodeFactor](https://www.codefactor.io/repository/github/ben1980/fourier/badge)](https://www.codefactor.io/repository/github/ben1980/fourier)
 
 One to two paragraph statement about your product and what it does.
 
