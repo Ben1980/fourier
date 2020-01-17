@@ -1,4 +1,4 @@
-# cpptemplate
+# fourier
 > Short blurb about what your product does.
 
 <!-- PROJECT SHIELDS -->
@@ -9,6 +9,7 @@
 *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 -->
+[![<ORG_NAME>](https://circleci.com/gh/Ben1980/fourier.svg?style=svg)](https://circleci.com/gh/Ben1980/fourier)
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
 [![Downloads Stats][npm-downloads]][npm-url]
