@@ -13,6 +13,7 @@ set ytics ("-1" -1, "" 0, "1" 1)
 set samples 2001
 set key off
 
+set output "images/square.png"
 square(x) = sgn(sin(x))
 plot square(x) lw 2 linetype 1
 
