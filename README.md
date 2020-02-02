@@ -1,17 +1,6 @@
 # fourier
 > Showcase implementation of the fast fourier algorithm as discused on [thoughts-on-cpp.com](https://thoughts-on-cpp.com/..)
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-[![<ORG_NAME>](https://circleci.com/gh/Ben1980/fourier.svg?style=svg)](https://circleci.com/gh/Ben1980/fourier)
-[![CodeFactor](https://www.codefactor.io/repository/github/ben1980/fourier/badge)](https://www.codefactor.io/repository/github/ben1980/fourier)
-
 One to two paragraph statement about your product and what it does.
 
 ![](header.png)
