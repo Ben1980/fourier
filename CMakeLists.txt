@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.14)
-project(------PROJECTNAME-------)
+project(fourier)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Release)
@@ -8,5 +8,9 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -std=c++17 -O3")
 
-include(CTest)
-add_subdirectory(lib)
+set(SOURCE main.cpp)
+add_executable(${PROJECT_NAME} ${SOURCE})
+
+find_package(fmt CONFIG REQUIRED)
+find_package(doctest CONFIG REQUIRED)
+target_link_libraries(${PROJECT_NAME} PRIVATE fmt::fmt fmt::fmt-header-only doctest::doctest)
