@@ -8,7 +8,7 @@ endif()
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -std=c++17 -O3")
 
-set(SOURCE main.cpp)
+set(SOURCE main.cpp fourier.h)
 add_executable(${PROJECT_NAME} ${SOURCE})
 
 find_package(fmt CONFIG REQUIRED)
