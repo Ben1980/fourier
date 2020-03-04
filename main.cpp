@@ -1,7 +1,9 @@
 #define DOCTEST_CONFIG_IMPLEMENT
 
 #include <doctest/doctest.h>
-#include "fourier.h"
+#include "dft.h"
+#include "cooleyTukey.h"
+#include "radixFour.h"
 
 int main(int argc, char **argv) {
     doctest::Context context;
@@ -9,7 +11,7 @@ int main(int argc, char **argv) {
 
     int res = context.run();
 
-    
+
 
 
 

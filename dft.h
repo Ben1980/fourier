@@ -4,7 +4,7 @@
 
 
 TEST_SUITE("Fourier test suite") {
-    TEST_CASE ("Fourier test") {
+    TEST_CASE ("DFT test") {
         
         CHECK(false);
         
