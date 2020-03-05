@@ -5,7 +5,7 @@
 
 TEST_SUITE("Fourier test suite") {
     TEST_CASE ("DFT test") {
-        auto data = TestDataHelper::ParseDataFile();
+        TestDataHelper::Data data = TestDataHelper::ParseDataFile("testData.txt");
 
         CHECK(false);
         

@@ -1,6 +1,7 @@
 #define DOCTEST_CONFIG_IMPLEMENT
 
 #include <doctest/doctest.h>
+#include "../lib/helper.h"
 #include "../lib/dft.h"
 #include "../lib/cooleyTukey.h"
 #include "../lib/radixFour.h"
