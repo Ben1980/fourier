@@ -16,8 +16,6 @@ namespace TestDataHelper
             INVALID_DATASET
         } error{Error::NONE};
 
-        Data() = default;
-        Data(const std::vector<std::pair<double, double>>& input, Error e) : data(input), error(e) {}
         operator bool() const { return error == Error::NONE; } 
         std::vector<std::pair<double, double>> & operator()() { return data; }
     };
@@ -39,9 +37,9 @@ namespace TestDataHelper
                 if(values.size() < 2 || values.size() > 2) {
                     return {{}, Data::Error::INVALID_DATASET};
                 }
-
-                const double x = atof(values.front().c_str());
-                const double y = atof(values.back().c_str());
+                
+                const double x = std::stod(values.front());
+                const double y = std::stod(values.back());
                 data().push_back({x, y});
             }
         }
