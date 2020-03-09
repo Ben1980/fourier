@@ -1,20 +1,17 @@
 #ifndef HELPER_H
 #define HELPER_H
 
-#include <vector>
-#include <fstream>
 #include <string>
-#include <boost/algorithm/string.hpp>
 
-struct InputData;
-struct FourierCoefficients;
+namespace Fourier {
+    struct InputData;
+    struct Coefficients;
+};
 
 namespace FourierHelper 
 {
-    InputData ParseInputDataFile(const std::string& inputData);
-    FourierCoefficients ParseOutputDataFile(const std::string& coefficients);
-
-    bool Equal(const FourierCoefficients& expected, const FourierCoefficients& results);
+    Fourier::InputData ParseInputDataFile(const std::string& inputData);
+    Fourier::Coefficients ParseOutputDataFile(const std::string& coefficients);
 };
 
 #endif

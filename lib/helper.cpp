@@ -1,11 +1,16 @@
 #include "helper.h"
+
+#include <vector>
+#include <fstream>
+#include <boost/algorithm/string.hpp>
+
 #include "fourier.h"
 
-InputData FourierHelper::ParseInputDataFile(const std::string& inputData)
+Fourier::InputData FourierHelper::ParseInputDataFile(const std::string& inputData)
 {
     std::fstream input(inputData, std::ifstream::in);
 
-    InputData data;
+    Fourier::InputData data;
     if(input.is_open() && input.good()) {
         std::string line;
         while(std::getline(input, line)) {
@@ -13,10 +18,10 @@ InputData FourierHelper::ParseInputDataFile(const std::string& inputData)
             boost::split(values, line, [](char c) { return c == ';'; });
 
             if(values.empty()) {
-                return {{}, Error::NO_VALUES};
+                return {{}, Fourier::Error::NO_VALUES};
             }
             if(values.size() < 2 || values.size() > 2) {
-                return {{}, Error::INVALID_DATASET};
+                return {{}, Fourier::Error::INVALID_DATASET};
             }
 
             const double x = std::stod(values.front());
@@ -28,11 +33,11 @@ InputData FourierHelper::ParseInputDataFile(const std::string& inputData)
     return data;
 }
 
-FourierCoefficients FourierHelper::ParseOutputDataFile(const std::string& coefficients)
+Fourier::Coefficients FourierHelper::ParseOutputDataFile(const std::string& coefficients)
 {
     std::fstream input(coefficients, std::ifstream::in);
 
-    FourierCoefficients data;
+    Fourier::Coefficients data;
     if(input.is_open() && input.good()) {
         std::string line;
         while(std::getline(input, line)) {
@@ -40,10 +45,10 @@ FourierCoefficients FourierHelper::ParseOutputDataFile(const std::string& coeffi
             boost::split(values, line, [](char c) { return c == ';'; });
 
             if(values.empty()) {
-                return {{}, Error::NO_VALUES};
+                return {{}, Fourier::Error::NO_VALUES};
             }
             if(values.size() < 3 || values.size() > 3) {
-                return {{}, Error::INVALID_DATASET};
+                return {{}, Fourier::Error::INVALID_DATASET};
             }
 
             const int x = std::stoi(values.front());
@@ -54,13 +59,4 @@ FourierCoefficients FourierHelper::ParseOutputDataFile(const std::string& coeffi
     }
 
     return data;
-}
-
-bool FourierHelper::Equal(const FourierCoefficients& expected, const FourierCoefficients& results)
-{
-    
-
-    bool equal = false;
-
-    return equal;
 }

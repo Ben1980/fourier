@@ -3,33 +3,50 @@
 
 #include <vector>
 
-enum class Error {
-    NONE,
-    NO_VALUES,
-    INVALID_DATASET
-};
-
-struct InputData {
-    std::vector<std::pair<double, double>> data;
-    Error error{Error::NONE};
-
-    operator bool() const { return error == Error::NONE; } 
-    std::vector<std::pair<double, double>> & operator()() { return data; }
-};
-
-struct FourierCoefficients {
-    struct FourierCoefficient {
-        int order{0};
-        double a{0};
-        double b{0};
+namespace Fourier {
+    enum class Error {
+        NONE,
+        NO_VALUES,
+        INVALID_DATASET
     };
 
-    std::vector<FourierCoefficient> coefficients;
-    Error error{Error::NONE};
-    
+    struct InputData {
+        std::vector<std::pair<double, double>> data;
+        Error error{Error::NONE};
 
-    operator bool() const { return error == Error::NONE; }
-    std::vector<FourierCoefficient> & operator()() { return coefficients; }
+        operator bool() const { 
+            return !data.empty() && error == Error::NONE; 
+        } 
+        std::vector<std::pair<double, double>> & operator()() { return data; }
+        const std::vector<std::pair<double, double>> & operator()() const { return data; }
+    };
+
+    struct Coefficients {
+        struct Coefficient {
+            int order{0};
+            double a{0};
+            double b{0};
+        };
+
+        std::vector<Coefficient> coefficients;
+        Error error{Error::NONE};
+        
+        operator bool() const { 
+            return !coefficients.empty() && error == Error::NONE;
+        }
+        std::vector<Coefficient> & operator()() { return coefficients; }
+        const std::vector<Coefficient> & operator()() const { return coefficients; }
+    };
+
+    
+    // bool Equal(const Coefficients& expected, const Coefficients& results) {
+    //     if(!expected || !results) return false;
+    //     if(expected().size() != results().size()) return false;
+
+    //     bool equal = false;
+
+    //     return equal;
+    // }
 };
 
 #endif
