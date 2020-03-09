@@ -3,13 +3,15 @@
 
 #include <vector>
 
+enum class Error {
+    NONE,
+    NO_VALUES,
+    INVALID_DATASET
+};
+
 struct InputData {
     std::vector<std::pair<double, double>> data;
-    enum class Error {
-        NONE,
-        NO_VALUES,
-        INVALID_DATASET
-    } error{Error::NONE};
+    Error error{Error::NONE};
 
     operator bool() const { return error == Error::NONE; } 
     std::vector<std::pair<double, double>> & operator()() { return data; }
@@ -22,15 +24,12 @@ struct FourierCoefficients {
         double b{0};
     };
 
-    enum class Error {
-        NONE,
-        NO_VALUES,
-        INVALID_DATASET
-    } error{Error::NONE};
-
     std::vector<FourierCoefficient> coefficients;
+    Error error{Error::NONE};
+    
 
     operator bool() const { return error == Error::NONE; }
+    std::vector<FourierCoefficient> & operator()() { return coefficients; }
 };
 
 #endif
