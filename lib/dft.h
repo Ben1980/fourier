@@ -6,7 +6,7 @@
 
 namespace DFT
 {
-    FourierCoefficients Solve(const FourierHelper::Data& data)
+    FourierCoefficients Solve(const InputData& data)
     {
         return {};
     }
@@ -14,10 +14,10 @@ namespace DFT
 
 TEST_SUITE("Fourier test suite") {
     TEST_CASE ("DFT test") {
-        FourierHelper::Data data = FourierHelper::ParseDataFile("testData.txt");
+        InputData data = FourierHelper::ParseInputDataFile("testData.txt");
         REQUIRE(data);
 
-        FourierHelper::Data expectedResults = FourierHelper::ParseDataFile("testResults.txt");
+        FourierCoefficients expectedResults = FourierHelper::ParseOutputDataFile("testResults.txt");
         REQUIRE(expectedResults);
 
         FourierCoefficients coefficients = DFT::Solve(data);

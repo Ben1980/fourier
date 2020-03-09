@@ -6,25 +6,15 @@
 #include <string>
 #include <boost/algorithm/string.hpp>
 
+struct InputData;
 struct FourierCoefficients;
 
 namespace FourierHelper 
 {
-    struct Data {
-        std::vector<std::pair<double, double>> data;
-        enum class Error {
-            NONE,
-            NO_VALUES,
-            INVALID_DATASET
-        } error{Error::NONE};
+    InputData ParseInputDataFile(const std::string& inputData);
+    FourierCoefficients ParseOutputDataFile(const std::string& coefficients);
 
-        operator bool() const { return error == Error::NONE; } 
-        std::vector<std::pair<double, double>> & operator()() { return data; }
-    };
-
-    Data ParseDataFile(const std::string& inputData);
-
-    bool Equal(const Data& expected, const FourierCoefficients& results);
+    bool Equal(const FourierCoefficients& expected, const FourierCoefficients& results);
 };
 
 #endif

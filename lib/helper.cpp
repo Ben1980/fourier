@@ -1,11 +1,11 @@
 #include "helper.h"
 #include "fourier.h"
 
-FourierHelper::Data FourierHelper::ParseDataFile(const std::string& inputData)
+InputData FourierHelper::ParseInputDataFile(const std::string& inputData)
 {
     std::fstream input(inputData, std::ifstream::in);
 
-    Data data;
+    InputData data;
     if(input.is_open() && input.good()) {
         std::string line;
         while(std::getline(input, line)) {
@@ -13,10 +13,10 @@ FourierHelper::Data FourierHelper::ParseDataFile(const std::string& inputData)
             boost::split(values, line, [](char c) { return c == ';'; });
 
             if(values.empty()) {
-                return {{}, Data::Error::NO_VALUES};
+                return {{}, InputData::Error::NO_VALUES};
             }
             if(values.size() < 2 || values.size() > 2) {
-                return {{}, Data::Error::INVALID_DATASET};
+                return {{}, InputData::Error::INVALID_DATASET};
             }
 
             const double x = std::stod(values.front());
@@ -28,7 +28,12 @@ FourierHelper::Data FourierHelper::ParseDataFile(const std::string& inputData)
     return data;
 }
 
-bool FourierHelper::Equal(const FourierHelper::Data& expected, const FourierCoefficients& results)
+FourierCoefficients FourierHelper::ParseOutputDataFile(const std::string& coefficients)
+{
+    return {};
+}
+
+bool FourierHelper::Equal(const FourierCoefficients& expected, const FourierCoefficients& results)
 {
     return false;
 }
