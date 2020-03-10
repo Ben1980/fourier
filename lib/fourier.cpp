@@ -2,16 +2,16 @@
 #include <algorithm>
 #include <cmath>
 
-bool Fourier::Equal(const Coefficients& expected, const Coefficients& result, double maximumDelta)
+bool Fourier::Equal(const Coefficients& expected, const Coefficients& result)
 {
     if(!expected || !result) return false;
     if(expected().size() != result().size()) return false;
 
     const bool equal = std::equal(expected().begin(), expected().end(), result().begin(), 
-    [maximumDelta](const Coefficients::Coefficient& expected, const Coefficients::Coefficient& result) {
+    [](const Coefficients::Coefficient& expected, const Coefficients::Coefficient& result) {
         const bool equalOrder = (expected.order - result.order) == 0;
-        const bool equalA = Equal(expected.a, result.a, maximumDelta);
-        const bool equalB = Equal(expected.b, result.b, maximumDelta);
+        const bool equalA = Equal(expected.a, result.a);
+        const bool equalB = Equal(expected.b, result.b);
 
         return equalOrder && equalA && equalB;
     });
