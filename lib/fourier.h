@@ -38,7 +38,8 @@ namespace Fourier {
         const std::vector<Coefficient> & operator()() const { return coefficients; }
     };
 
-    bool Equal(const Coefficients& expected, const Coefficients& results);
+    bool Equal(const Coefficients& expected, const Coefficients& result, double maximumDelta = 1e-15);
+    bool Equal(double a, double b, double maximumDelta = 1e-15);
 };
 
 #endif

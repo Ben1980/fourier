@@ -1,11 +1,30 @@
 #include "fourier.h"
+#include <algorithm>
+#include <cmath>
 
-bool Fourier::Equal(const Fourier::Coefficients& expected, const Fourier::Coefficients& results)
+bool Fourier::Equal(const Coefficients& expected, const Coefficients& result, double maximumDelta)
 {
-    if(!expected || !results) return false;
-    if(expected().size() != results().size()) return false;
+    if(!expected || !result) return false;
+    if(expected().size() != result().size()) return false;
 
-    bool equal = false;
+    const bool equal = std::equal(expected().begin(), expected().end(), result().begin(), 
+    [maximumDelta](const Coefficients::Coefficient& expected, const Coefficients::Coefficient& result) {
+        const bool equalOrder = (expected.order - result.order) == 0;
+        const bool equalA = Equal(expected.a, result.a, maximumDelta);
+        const bool equalB = Equal(expected.b, result.b, maximumDelta);
+
+        return equalOrder && equalA && equalB;
+    });
 
     return equal;
+}
+
+bool Fourier::Equal(double expected, double result, double maximumDelta)
+{
+    if(expected > std::numeric_limits<double>::min()) { // Test case for values unequal to 0
+        return std::fabs(result/expected - 1) <= maximumDelta;
+    }
+
+    // Test case for values equal to 0
+    return std::fabs(result) <= std::numeric_limits<double>::min();
 }
