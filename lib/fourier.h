@@ -1,5 +1,5 @@
-#ifndef test_H
-#define test_H
+#ifndef FOURIER_H
+#define FOURIER_H
 
 #include <vector>
 
