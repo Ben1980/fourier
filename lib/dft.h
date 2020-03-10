@@ -1,8 +1,8 @@
 #ifndef DFT_H
 #define DFT_H
 
-#include "fourier.h"
 #include "helper.h"
+#include "fourier.h"
 
 namespace DFT
 {
@@ -22,7 +22,7 @@ TEST_SUITE("Fourier test suite") {
 
         Fourier::Coefficients coefficients = DFT::Solve(data);
 
-        //CHECK(Fourier::Equal(expectedResults, coefficients));
+        CHECK(Fourier::Equal(expectedResults, coefficients));
     }
 }
 

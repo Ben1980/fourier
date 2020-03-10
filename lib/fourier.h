@@ -1,5 +1,5 @@
-#ifndef FOURIER_H
-#define FOURIER_H
+#ifndef test_H
+#define test_H
 
 #include <vector>
 
@@ -38,15 +38,7 @@ namespace Fourier {
         const std::vector<Coefficient> & operator()() const { return coefficients; }
     };
 
-    
-    // bool Equal(const Coefficients& expected, const Coefficients& results) {
-    //     if(!expected || !results) return false;
-    //     if(expected().size() != results().size()) return false;
-
-    //     bool equal = false;
-
-    //     return equal;
-    // }
+    bool Equal(const Coefficients& expected, const Coefficients& results);
 };
 
 #endif

@@ -1,7 +1,9 @@
 cmake_minimum_required(VERSION 3.14)
 project(lib)
 
-set(SOURCE fourier.h dft.h cooleyTukey.h radixFour.h helper.h helper.cpp)
+set(SOURCE dft.h cooleyTukey.h radixFour.h 
+            fourier.h fourier.cpp 
+            helper.h helper.cpp)
 add_library(${PROJECT_NAME} ${SOURCE})
 
 find_package(fmt CONFIG REQUIRED)
