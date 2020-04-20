@@ -10,3 +10,4 @@ set(CMAKE_CXX_FLAGS_RELEASE "${CMAKE_CXX_FLAGS_RELEASE} -std=c++17 -O3")
 
 add_subdirectory(app)
 add_subdirectory(lib)
+add_subdirectory(helperlib)

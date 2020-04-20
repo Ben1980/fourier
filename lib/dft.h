@@ -1,8 +1,8 @@
 #ifndef DFT_H
 #define DFT_H
 
-#include "helper.h"
-#include "fourier.h"
+#include "../helperlib/helper.h"
+#include "../helperlib/fourier.h"
 
 namespace DFT
 {
