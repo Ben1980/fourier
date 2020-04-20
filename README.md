@@ -1,74 +1,79 @@
-# fourier
-> Showcase implementation of the fast fourier algorithm as discused on [thoughts-on-cpp.com](https://thoughts-on-cpp.com/..)
+# fourier {#mainpage}
+> Showcase implementation of the several fourier transformation algorithms as discused on [thoughts-on-cpp.com](https://thoughts-on-cpp.com/..)
 
-One to two paragraph statement about your product and what it does.
+[![CircleCI][circleci-badge]][circleci-url]
+[![CodeFactor Grade][codefactor-badge]][codefactor-url]
+[![Documentation][documentation-badge]][documentation-url]
+[![License][license-badge]][license-url]
 
-![](squarewave.gif)
+An example implementation of several fourier transformation algorithms:
+- Direct Fourier Transformation (DFT)
 
-## Installation
+![](images/squarewave.gif)
 
-OS X & Linux:
+## Getting Started
 
-```sh
-npm install my-crazy-module --save
-```
+To build the project:
+- Setup toolchain `~/fourier/build/cmake .. -DCMAKE_TOOLCHAIN_FILE={YOUR_PATH_TO_VCPKG}/scripts/buildsystems/vcpkg.cmake`
+- Build `~/fourier/build/cmake --build . --config Release`
+- Execute the tests `~/fourier/build/ctest`
+- You can execute the program by `./build/app/fourier`
 
-Windows:
+### Prerequisites/Dependencies
 
-```sh
-edit autoexec.bat
-```
-
-## Usage example
-
-A few motivating and useful examples of how your product can be used. Spice this up with code blocks and potentially more screenshots.
-
-_For more examples and usage, please refer to the [Wiki][wiki]._
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
-```
+- [cmake][cmake-url] – Open-Source, cross-platform build tool
+- [fmt][fmt-url] – External library used for formatting and printing results
+- [doctest][doctest-url] – Feature-rich C++11/14/17/20 single-header testing framework for unit tests and TDD
+- [vcpkg][vcpkg-url] – C++ Library Manager for Windows, Linux, and MacOS
+- [python 3][python-url] – A programming language used to convert ctest results with a xml transformation (xslt)
 
 ## Release History
 
-* 0.2.1
-    * CHANGE: Update docs (module code remains unchanged)
-* 0.2.0
-    * CHANGE: Remove `setDefaultXYZ()`
-    * ADD: Add `init()`
-* 0.1.1
-    * FIX: Crash when calling `baz()` (Thanks @GenerousContributorName!)
-* 0.1.0
-    * The first proper release
-    * CHANGE: Rename `foo()` to `bar()`
-* 0.0.1
-    * Work in progress
+* [0.1.0][v0.1.0]
+    * ADD: Direct Fourier Transformation (DFT)
+    * ADD: Fourier test data
 
 ## Meta
 
-Your Name – [@YourTwitter](https://twitter.com/dbader_org) – YourEmail@example.com
+**Benjamin Mahr** – [GitHub][rep-url]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– [LinkedIn][linkedin-url]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– [Twitter][twitter-url]  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;– [Mail][mail]
 
-Distributed under the XYZ license. See ``LICENSE`` for more information.
-
-[https://github.com/yourname/github-link](https://github.com/dbader/)
+Distributed under the MIT license. See ``LICENSE`` for more information.
 
 ## Contributing
 
-1. Fork it (<https://github.com/yourname/yourproject/fork>)
+1. Fork it (<https://github.com/Ben1980/fourier/fork>)
 2. Create your feature branch (`git checkout -b feature/fooBar`)
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
 
-<!-- Markdown link & img dfn's -->
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
-[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
-[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
-[wiki]: https://github.com/yourname/yourproject/wiki
+## Acknowledgments
+
+- Converting CTest results int JUnit XML – https://stackoverflow.com/a/21688776/1541782
+- README.md template inspiration – https://github.com/dbader/readme-template
+- Doxygen GitHub-Action – https://github.com/mattnotmitt/doxygen-action
+- gh-pages GitHub-Action – https://github.com/peaceiris/actions-gh-pages
+- Dockerfile Tips – https://blog.container-solutions.com/6-dockerfile-tips-official-images
+
+[circleci-url]: https://circleci.com/gh/Ben1980/fourier
+[codefactor-url]: https://www.codefactor.io/repository/github/ben1980/fourier
+[documentation-url]: https://ben1980.github.io/fourier/
+[license-url]: https://github.com/Ben1980/fourier/blob/master/LICENSE
+[circleci-badge]: https://img.shields.io/circleci/build/gh/Ben1980/fourier
+[codefactor-badge]: https://img.shields.io/codefactor/grade/github/ben1980/fourier
+[documentation-badge]: https://img.shields.io/github/workflow/status/Ben1980/fourier/Documentation?label=Documentation
+[license-badge]: https://img.shields.io/github/license/Ben1980/fourier
+[cmake-url]: https://cmake.org/
+[fmt-url]: https://fmt.dev/latest/index.html
+[doctest-url]: https://github.com/onqtam/doctest
+[rep-url]: https://github.com/Ben1980
+[linkedin-url]: https://www.linkedin.com/in/benjamin-mahr-728a1639/
+[twitter-url]: https://twitter.com/BenMahr
+[mail]: ben.amhr@gmail.com
+[vcpkg-url]: https://github.com/microsoft/vcpkg
+[python-url]: https://www.python.org/
+
+[v0.1.0]: https://github.com/Ben1980/fourier/releases/tag/v0.1.0
