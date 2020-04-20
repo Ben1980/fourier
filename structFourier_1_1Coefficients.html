@@ -82,16 +82,21 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>The resulting coefficients of a fourier transformation.  
+ <a href="structFourier_1_1Coefficients.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="fourier_8h_source.html">fourier.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFourier_1_1Coefficients_1_1Coefficient.html">Coefficient</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The actual coefficient data point The actual coefficients derived by a fourier transformation.  <a href="structFourier_1_1Coefficients_1_1Coefficient.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a0c50346556bb96f52296c6aa5470bf0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFourier_1_1Coefficients.html#a0c50346556bb96f52296c6aa5470bf0a">operator bool</a> () const</td></tr>
+<tr class="memdesc:a0c50346556bb96f52296c6aa5470bf0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a dataset is good.  <a href="structFourier_1_1Coefficients.html#a0c50346556bb96f52296c6aa5470bf0a">More...</a><br /></td></tr>
 <tr class="separator:a0c50346556bb96f52296c6aa5470bf0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf91179e165ee107ac28e24fde17957a"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structFourier_1_1Coefficients_1_1Coefficient.html">Coefficient</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFourier_1_1Coefficients.html#abf91179e165ee107ac28e24fde17957a">operator()</a> ()</td></tr>
 <tr class="separator:abf91179e165ee107ac28e24fde17957a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -101,11 +106,14 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a896dac6f644a1f7b742f175819059f74"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="structFourier_1_1Coefficients_1_1Coefficient.html">Coefficient</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFourier_1_1Coefficients.html#a896dac6f644a1f7b742f175819059f74">coefficients</a></td></tr>
+<tr class="memdesc:a896dac6f644a1f7b742f175819059f74"><td class="mdescLeft">&#160;</td><td class="mdescRight">The posible error state of the dataset.  <a href="structFourier_1_1Coefficients.html#a896dac6f644a1f7b742f175819059f74">More...</a><br /></td></tr>
 <tr class="separator:a896dac6f644a1f7b742f175819059f74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d70e5948f90298c3667e0f4c79f46f0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespaceFourier.html#a4d6e33d1589e9d2aabae4c6a1ae6b71b">Error</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFourier_1_1Coefficients.html#a3d70e5948f90298c3667e0f4c79f46f0">error</a> {<a class="el" href="namespaceFourier.html#a4d6e33d1589e9d2aabae4c6a1ae6b71bab50339a10e1de285ac99d4c3990b8693">Error::NONE</a>}</td></tr>
 <tr class="separator:a3d70e5948f90298c3667e0f4c79f46f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The resulting coefficients of a fourier transformation. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0c50346556bb96f52296c6aa5470bf0a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c50346556bb96f52296c6aa5470bf0a">&#9670;&nbsp;</a></span>operator bool()</h2>
 
@@ -128,6 +136,11 @@ Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Checks if a dataset is good. </p>
+<dl class="section return"><dt>Returns</dt><dd>true In case the data is good </dd>
+<dd>
+false In case the data is bad </dd></dl>
 
 </div>
 </div>
@@ -193,6 +206,8 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>The posible error state of the dataset. </p>
 
 </div>
 </div>

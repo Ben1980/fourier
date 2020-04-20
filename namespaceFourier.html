@@ -76,12 +76,17 @@ $(function() {
 <div class="title">Fourier Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="namespaceFourier.html" title="The Fourier namespace is providing data structures to handle input and resulting coefficients of a fo...">Fourier</a> namespace is providing data structures to handle input and resulting coefficients of a fourier transformation.  
+<a href="namespaceFourier.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFourier_1_1Coefficients.html">Coefficients</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The resulting coefficients of a fourier transformation.  <a href="structFourier_1_1Coefficients.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structFourier_1_1InputData.html">InputData</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The input data to perform a fourier transformation.  <a href="structFourier_1_1InputData.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
@@ -95,11 +100,15 @@ Enumerations</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a550d31c1224f6fa3b7abf824f2c831e7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFourier.html#a550d31c1224f6fa3b7abf824f2c831e7">Equal</a> (const <a class="el" href="structFourier_1_1Coefficients.html">Coefficients</a> &amp;expected, const <a class="el" href="structFourier_1_1Coefficients.html">Coefficients</a> &amp;result)</td></tr>
+<tr class="memdesc:a550d31c1224f6fa3b7abf824f2c831e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two coefficient lists of the same size.  <a href="namespaceFourier.html#a550d31c1224f6fa3b7abf824f2c831e7">More...</a><br /></td></tr>
 <tr class="separator:a550d31c1224f6fa3b7abf824f2c831e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad11de430ec2930a326e82f0a3278b219"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFourier.html#ad11de430ec2930a326e82f0a3278b219">Equal</a> (double a, double b, double maximumDelta=1e-15)</td></tr>
-<tr class="separator:ad11de430ec2930a326e82f0a3278b219"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af8429ecf21d5a55601f55ea498b99f59"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFourier.html#af8429ecf21d5a55601f55ea498b99f59">Equal</a> (double expected, double result, double maximumDelta=1e-15)</td></tr>
+<tr class="memdesc:af8429ecf21d5a55601f55ea498b99f59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compares two given values.  <a href="namespaceFourier.html#af8429ecf21d5a55601f55ea498b99f59">More...</a><br /></td></tr>
+<tr class="separator:af8429ecf21d5a55601f55ea498b99f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="namespaceFourier.html" title="The Fourier namespace is providing data structures to handle input and resulting coefficients of a fo...">Fourier</a> namespace is providing data structures to handle input and resulting coefficients of a fourier transformation. </p>
+</div><h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a4d6e33d1589e9d2aabae4c6a1ae6b71b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4d6e33d1589e9d2aabae4c6a1ae6b71b">&#9670;&nbsp;</a></span>Error</h2>
 
@@ -153,20 +162,32 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares two coefficient lists of the same size. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expected</td><td></td></tr>
+    <tr><td class="paramname">result</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true In case of both coefficient lists are equal </dd>
+<dd>
+false In case of both coefficient lists are unequal </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceFourier_a550d31c1224f6fa3b7abf824f2c831e7_icgraph.png" border="0" usemap="#namespaceFourier_a550d31c1224f6fa3b7abf824f2c831e7_icgraph" alt=""/></div>
 <map name="namespaceFourier_a550d31c1224f6fa3b7abf824f2c831e7_icgraph" id="namespaceFourier_a550d31c1224f6fa3b7abf824f2c831e7_icgraph">
-<area shape="rect" title=" " alt="" coords="155,5,255,32"/>
+<area shape="rect" title="Compares two coefficient lists of the same size." alt="" coords="155,5,255,32"/>
 <area shape="rect" href="dft_8h.html#af51d201fba2656e94f6a08a75b4be48d" title=" " alt="" coords="5,5,107,32"/>
 </map>
 </div>
 
 </div>
 </div>
-<a id="ad11de430ec2930a326e82f0a3278b219"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad11de430ec2930a326e82f0a3278b219">&#9670;&nbsp;</a></span>Equal() <span class="overload">[2/2]</span></h2>
+<a id="af8429ecf21d5a55601f55ea498b99f59"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af8429ecf21d5a55601f55ea498b99f59">&#9670;&nbsp;</a></span>Equal() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -175,13 +196,13 @@ Here is the caller graph for this function:</div>
           <td class="memname">bool Fourier::Equal </td>
           <td>(</td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>a</em>, </td>
+          <td class="paramname"><em>expected</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>b</em>, </td>
+          <td class="paramname"><em>result</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -196,6 +217,19 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Compares two given values. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">expected</td><td></td></tr>
+    <tr><td class="paramname">result</td><td></td></tr>
+    <tr><td class="paramname">maximumDelta</td><td>The maximum allowed difference between expected and result </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true In case of both values are equal </dd>
+<dd>
+false In case of both values are unequal </dd></dl>
 
 </div>
 </div>

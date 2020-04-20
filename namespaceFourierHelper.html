@@ -78,8 +78,10 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ab2ed26c2b1c0f7ec0d9c6313deb206dc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFourier_1_1InputData.html">Fourier::InputData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFourierHelper.html#ab2ed26c2b1c0f7ec0d9c6313deb206dc">ParseInputDataFile</a> (const std::string &amp;inputData)</td></tr>
+<tr class="memdesc:ab2ed26c2b1c0f7ec0d9c6313deb206dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms input data of the form x;y into <a class="el" href="namespaceFourier.html" title="The Fourier namespace is providing data structures to handle input and resulting coefficients of a fo...">Fourier</a>:InputData datastruct.  <a href="namespaceFourierHelper.html#ab2ed26c2b1c0f7ec0d9c6313deb206dc">More...</a><br /></td></tr>
 <tr class="separator:ab2ed26c2b1c0f7ec0d9c6313deb206dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5ec604d73b735d306431e9f3248d7c1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structFourier_1_1Coefficients.html">Fourier::Coefficients</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceFourierHelper.html#ae5ec604d73b735d306431e9f3248d7c1">ParseOutputDataFile</a> (const std::string &amp;coefficients)</td></tr>
+<tr class="memdesc:ae5ec604d73b735d306431e9f3248d7c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transforms coefficients of the form i;x;y into <a class="el" href="namespaceFourier.html" title="The Fourier namespace is providing data structures to handle input and resulting coefficients of a fo...">Fourier</a>:Coefficients datastruct.  <a href="namespaceFourierHelper.html#ae5ec604d73b735d306431e9f3248d7c1">More...</a><br /></td></tr>
 <tr class="separator:ae5ec604d73b735d306431e9f3248d7c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -98,12 +100,22 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Transforms input data of the form x;y into <a class="el" href="namespaceFourier.html" title="The Fourier namespace is providing data structures to handle input and resulting coefficients of a fo...">Fourier</a>:InputData datastruct. </p>
+<p>The input data contains x;y (cartesian coordinates) data points seperated by a linebreak</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">inputData</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structFourier_1_1InputData.html" title="The input data to perform a fourier transformation.">Fourier::InputData</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceFourierHelper_ab2ed26c2b1c0f7ec0d9c6313deb206dc_icgraph.png" border="0" usemap="#namespaceFourierHelper_ab2ed26c2b1c0f7ec0d9c6313deb206dc_icgraph" alt=""/></div>
 <map name="namespaceFourierHelper_ab2ed26c2b1c0f7ec0d9c6313deb206dc_icgraph" id="namespaceFourierHelper_ab2ed26c2b1c0f7ec0d9c6313deb206dc_icgraph">
-<area shape="rect" title=" " alt="" coords="155,5,324,47"/>
+<area shape="rect" title="Transforms input data of the form x;y into Fourier:InputData datastruct." alt="" coords="155,5,324,47"/>
 <area shape="rect" href="dft_8h.html#af51d201fba2656e94f6a08a75b4be48d" title=" " alt="" coords="5,13,107,39"/>
 </map>
 </div>
@@ -125,12 +137,22 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Transforms coefficients of the form i;x;y into <a class="el" href="namespaceFourier.html" title="The Fourier namespace is providing data structures to handle input and resulting coefficients of a fo...">Fourier</a>:Coefficients datastruct. </p>
+<p>The input data contains i:x;y data points seperated by a linebreak i = datapoint x = order y = amplitude</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coefficients</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="structFourier_1_1Coefficients.html" title="The resulting coefficients of a fourier transformation.">Fourier::Coefficients</a> </dd></dl>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceFourierHelper_ae5ec604d73b735d306431e9f3248d7c1_icgraph.png" border="0" usemap="#namespaceFourierHelper_ae5ec604d73b735d306431e9f3248d7c1_icgraph" alt=""/></div>
 <map name="namespaceFourierHelper_ae5ec604d73b735d306431e9f3248d7c1_icgraph" id="namespaceFourierHelper_ae5ec604d73b735d306431e9f3248d7c1_icgraph">
-<area shape="rect" title=" " alt="" coords="155,5,333,47"/>
+<area shape="rect" title="Transforms coefficients of the form i;x;y into Fourier:Coefficients datastruct." alt="" coords="155,5,333,47"/>
 <area shape="rect" href="dft_8h.html#af51d201fba2656e94f6a08a75b4be48d" title=" " alt="" coords="5,13,107,39"/>
 </map>
 </div>
