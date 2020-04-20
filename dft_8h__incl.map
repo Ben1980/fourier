@@ -1,7 +1,7 @@
 <map id="lib/dft.h" name="lib/dft.h">
-<area shape="rect" id="node1" title=" " alt="" coords="52,5,116,32"/>
-<area shape="rect" id="node2" href="$helper_8h.html" title=" " alt="" coords="5,80,72,107"/>
-<area shape="rect" id="node4" href="$fourier_8h.html" title=" " alt="" coords="97,80,165,107"/>
-<area shape="rect" id="node3" title=" " alt="" coords="11,155,66,181"/>
-<area shape="rect" id="node5" title=" " alt="" coords="101,155,160,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="114,5,178,32"/>
+<area shape="rect" id="node2" href="$helper_8h.html" title=" " alt="" coords="5,80,135,107"/>
+<area shape="rect" id="node4" href="$fourier_8h.html" title=" " alt="" coords="158,80,289,107"/>
+<area shape="rect" id="node3" title=" " alt="" coords="43,155,97,181"/>
+<area shape="rect" id="node5" title=" " alt="" coords="194,155,253,181"/>
 </map>
