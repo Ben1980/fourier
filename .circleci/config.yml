@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Install vcpkg dependencies
-          command: ./../../vcpkg/vcpkg install fmt doctest
+          command: ./../../vcpkg/vcpkg install fmt doctest boost
       - run:
           name: Create build directories
           command: |
